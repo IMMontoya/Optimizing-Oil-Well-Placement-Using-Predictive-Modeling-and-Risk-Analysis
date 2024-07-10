@@ -9,7 +9,7 @@ This project aims to assist the OilyGiant mining company in identifying the opti
 [Train and Test Model for Each Region](#train-and-test-the-model-for-each-region)  
 [Prepare for Profit Calculation](#prepare-for-profit-calculation)  
 [Calculate Profit](#calculate-profit)  
-[Calculate Risks and Bootstrap Profit](#calculate-risks-and-bootstrap-profit)
+[Calculate Risks and Bootstrap Profit](#calculate-risks-and-bootstrap-profit)  
 [Final Recommendation](#final-recommendation)
 
 ## Data Description
