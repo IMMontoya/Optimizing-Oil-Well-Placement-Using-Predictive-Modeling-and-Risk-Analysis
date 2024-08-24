@@ -181,9 +181,6 @@ Without consideration for risk, each region would expected to be profitable acco
         # Sample 500 wells with replacement
         sample = predictions.sample(n=500, replace=True, random_state=state)
         
-        # Pick top 200 wells in terms of predicted reserves
-        sample = sample.sort_values('predictions', ascending=False).head(200)
-        
         # Calculate profit
         values.append(profit(sample))
         
@@ -213,6 +210,6 @@ Without consideration for risk, each region would expected to be profitable acco
 
 ### Final Recommendation
 
-The best region for development is region 1. Not only does region 1 yield the highest profits based off the model's predictions, it does so with a higher degree of accuracy. This results in the least risk of losses (1.4%) among the three regions considered, and a 95% confidence interval that is entirely in the green (not the case for regions 0 and 2).  
+The best region for development is region 1. Not only does region 1 yield the highest profits based off the model's predictions, it does so with a higher degree of accuracy. This results in the least risk of losses (0.7%) among the three regions considered, and a 95% confidence interval that is entirely in the green (not the case for regions 0 and 2).  
 
 In short, region 1 has the highest potential for returns, and lowest potential for losses among the three regions considered.
