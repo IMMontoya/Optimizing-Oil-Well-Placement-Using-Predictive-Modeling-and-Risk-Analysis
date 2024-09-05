@@ -10,6 +10,7 @@
 - [Calculate Profit](#calculate-profit)  
 - [Calculate Risks and Bootstrap Profit](#calculate-risks-and-bootstrap-profit)  
 - [Final Recommendation](#final-recommendation)
+- [Libraries Used](#libraries-used)
 
 ## Project Overview
 
