@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Notebook](notebook.ipynb)  
+- [Notebook](oil_well_prediction_nb.ipynb)  
 - [Project Overview](#project-overview)
 - [Data Description](#data-description)  
 - [Train and Test Model for Each Region](#train-and-test-the-model-for-each-region)  
