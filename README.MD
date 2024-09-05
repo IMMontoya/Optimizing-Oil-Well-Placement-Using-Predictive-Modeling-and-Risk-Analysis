@@ -1,16 +1,19 @@
 # Optimizing Oil Well Placement Using Predictive Modeling and Risk Analysis
 
+## Table of Contents
+
+- [Notebook](notebook.ipynb)  
+- [Project Overview](#project-overview)
+- [Data Description](#data-description)  
+- [Train and Test Model for Each Region](#train-and-test-the-model-for-each-region)  
+- [Prepare for Profit Calculation](#prepare-for-profit-calculation)  
+- [Calculate Profit](#calculate-profit)  
+- [Calculate Risks and Bootstrap Profit](#calculate-risks-and-bootstrap-profit)  
+- [Final Recommendation](#final-recommendation)
+
 ## Project Overview
 
 This project aims to assist the OilyGiant mining company in identifying the optimal location for new oil well development of 200 wells. By analyzing geological data from three different regions, we build a predictive model to estimate the volume of oil reserves in potential new wells. The primary goal is to maximize profit by selecting the region with the highest expected returns while also accounting for risks. This is done by leveraging linear regression for predictions and employing bootstrapping techniques to determine the average predicted revenue and associated risks.
-
-[Notebook](notebook.ipynb)  
-[Data Description](#data-description)  
-[Train and Test Model for Each Region](#train-and-test-the-model-for-each-region)  
-[Prepare for Profit Calculation](#prepare-for-profit-calculation)  
-[Calculate Profit](#calculate-profit)  
-[Calculate Risks and Bootstrap Profit](#calculate-risks-and-bootstrap-profit)  
-[Final Recommendation](#final-recommendation)
 
 ## Data Description
 
@@ -147,7 +150,7 @@ In this section, we prepare the necessary calculations to estimate the profitabi
 
 ### Calculate Profit
 
-1. Profits for each region are calculated by selecting the top 200 wells in terms of model prediction, then taking the actual reserves found in those wells and multiplying their sum by the $4,500.00 price per 1k barrels (1 unit of the product) with the budget amount subtracted. 
+1. Profits for each region are calculated by selecting the top 200 wells in terms of model prediction, then taking the actual reserves found in those wells and multiplying their sum by the $4,500.00 price per 1k barrels (1 unit of the product) with the budget amount subtracted.
 
     ```python
     def profit(predictions):
@@ -170,6 +173,7 @@ Without consideration for risk, each region would expected to be profitable acco
 ### Calculate Risks and Bootstrap Profit
 
 1. Bootstrap methodology is used to make 1,000 profit predictions with a sample size of 500. Each prediction is stored in the values variable for calculating the 95% confidence interval.
+
     ```python
     def bootstrap(predictions):
     """
@@ -213,3 +217,12 @@ Without consideration for risk, each region would expected to be profitable acco
 The best region for development is region 1. Not only does region 1 yield the highest profits based off the model's predictions, it does so with a higher degree of accuracy. This results in the least risk of losses (0.7%) among the three regions considered, and a 95% confidence interval that is entirely in the green (not the case for regions 0 and 2).  
 
 In short, region 1 has the highest potential for returns, and lowest potential for losses among the three regions considered.
+
+## Libraries Used
+
+Python 3.10.9  
+pandas=2.0.3  
+numpy=1.25.2  
+matplotlib=3.7.1  
+seaborn=0.13.1  
+sklearn=1.2.2  
