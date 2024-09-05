@@ -1,0 +1,5 @@
+# Hidden files
+._*
+
+# The data files
+geo_data_*.csv
